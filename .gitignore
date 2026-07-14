@@ -13,5 +13,5 @@ __pycache__/
 momentum_animated.html
 momentum_animated_3d.html
 
-# machine-specific Claude Code settings
-.claude/settings.local.json
+# Claude Code project config
+.claude/
