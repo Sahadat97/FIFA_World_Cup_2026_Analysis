@@ -198,3 +198,7 @@ endpoints.
 | 406 | Requested a non-JSON format |
 | 429 | Rate limited — back off and retry |
 | 500/503 | Server error / maintenance |
+
+## License
+
+MIT — see [LICENSE](LICENSE).
