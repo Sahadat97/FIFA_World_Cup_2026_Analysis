@@ -1,0 +1,49 @@
+person_id,name,team,team_abbreviation,rank,clean_sheets,goals_conceded,goalkeeper_saves,goalkeeper_defensive_actions_inside_penalty_area,goalkeeper_defensive_actions_outside_penalty_area
+285023_43969,Spain,Spain,ESP,1,5,1,10,85,65
+285023_43946,France,France,FRA,2,4,2,11,66,53
+285023_43926,Colombia,Colombia,COL,2,4,1,7,57,54
+285023_43911,Mexico,Mexico,MEX,2,4,3,8,60,49
+285023_43963,Portugal,Portugal,POR,5,2,3,20,114,93
+285023_43976,Australia,Australia,AUS,5,2,3,14,91,76
+285023_43860,Ghana,Ghana,GHA,5,2,3,16,86,77
+285023_43850,Cabo Verde,Cabo Verde,CPV,5,2,5,18,136,102
+285023_43899,Canada,Canada,CAN,5,2,6,7,49,40
+285023_43921,USA,USA,USA,5,2,8,10,79,65
+285023_43971,Switzerland,Switzerland,SUI,5,2,6,20,100,88
+285023_43928,Paraguay,Paraguay,PAR,5,2,6,28,141,124
+285023_43854,Côte d'Ivoire,Côte d'Ivoire,CIV,5,2,4,11,84,68
+285023_43924,Brazil,Brazil,BRA,5,2,4,15,67,59
+285023_43942,England,England,ENG,5,2,6,14,116,94
+285023_43872,Morocco,Morocco,MAR,5,2,6,19,112,91
+285023_43922,Argentina,Argentina,ARG,5,2,6,8,76,64
+285023_43817,IR Iran,IR Iran,IRN,18,1,3,15,75,65
+285023_43835,Saudi Arabia,Saudi Arabia,KSA,18,1,5,17,86,78
+285023_43879,Senegal,Senegal,SEN,18,1,9,13,87,70
+285023_43938,Croatia,Croatia,CRO,18,1,7,12,80,68
+285023_43883,South Africa,South Africa,RSA,18,1,4,14,72,59
+285023_43819,Japan,Japan,JPN,18,1,5,17,78,64
+285023_43967,Scotland,Scotland,SCO,18,1,4,9,75,64
+285023_1895293,Curaçao,Curaçao,CUW,18,1,9,21,81,72
+285023_43927,Ecuador,Ecuador,ECU,18,1,4,12,68,63
+285023_43935,Belgium,Belgium,BEL,18,1,7,19,117,95
+285023_44037,Bosnia and Herzegovina,Bosnia and Herzegovina,BIH,28,0,8,8,92,70
+285023_20014,Congo DR,Congo DR,COD,28,0,5,15,83,70
+285023_43888,Tunisia,Tunisia,TUN,28,0,12,7,77,64
+285023_43855,Egypt,Egypt,EGY,28,0,7,14,119,105
+285023_43834,Qatar,Qatar,QAT,28,0,10,16,124,103
+285023_43961,Norway,Norway,NOR,28,0,11,22,132,115
+285023_43995,Czechia,Czechia,CZE,28,0,6,11,60,52
+285023_43930,Uruguay,Uruguay,URU,28,0,4,4,48,39
+285023_43978,New Zealand,New Zealand,NZL,28,0,10,11,97,88
+285023_43934,Austria,Austria,AUT,28,0,9,15,85,74
+285023_43818,Iraq,Iraq,IRQ,28,0,12,10,94,81
+285023_43960,Netherlands,Netherlands,NED,28,0,5,17,57,54
+285023_43948,Germany,Germany,GER,28,0,5,7,61,45
+285023_43822,Korea Republic,Korea Republic,KOR,28,0,3,11,42,34
+285023_43914,Panama,Panama,PAN,28,0,4,9,48,42
+285023_44005,Uzbekistan,Uzbekistan,UZB,28,0,11,6,82,65
+285023_43972,Türkiye,Türkiye,TUR,28,0,5,8,55,46
+285023_43908,Haiti,Haiti,HAI,28,0,8,13,56,48
+285023_43820,Jordan,Jordan,JOR,28,0,8,8,70,56
+285023_43843,Algeria,Algeria,ALG,28,0,9,9,48,45
+285023_43970,Sweden,Sweden,SWE,28,0,10,16,76,66

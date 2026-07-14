@@ -1,0 +1,101 @@
+match_id,match_number,datetime,status,stage,group,round_name,home_team,away_team,home_score,away_score,has_extra_time,has_penalty_shootout,home_score_penalties,away_score_penalties,stadium
+1,1,2026-06-11T19:00:00.000Z,completed,Group Stage,Group A,,Mexico,South Africa,2.0,0.0,False,False,,,Estadio Azteca
+24,1,2026-06-18T02:00:00.000Z,completed,Group Stage,Group K,,Uzbekistan,Colombia,1.0,3.0,False,False,,,Estadio Azteca
+23,1,2026-06-17T23:00:00.000Z,completed,Group Stage,Group L,,Ghana,Panama,1.0,0.0,False,False,,,BMO Field
+22,1,2026-06-17T20:00:00.000Z,completed,Group Stage,Group L,,England,Croatia,4.0,2.0,False,False,,,AT&T Stadium
+21,1,2026-06-17T17:00:00.000Z,completed,Group Stage,Group K,,Portugal,DR Congo,1.0,1.0,False,False,,,NRG Stadium
+20,1,2026-06-17T04:00:00.000Z,completed,Group Stage,Group J,,Austria,Jordan,3.0,1.0,False,False,,,Levi's Stadium
+19,1,2026-06-17T01:00:00.000Z,completed,Group Stage,Group J,,Argentina,Algeria,3.0,0.0,False,False,,,Arrowhead Stadium
+17,1,2026-06-16T19:00:00.000Z,completed,Group Stage,Group I,,France,Senegal,3.0,1.0,False,False,,,MetLife Stadium
+16,1,2026-06-16T01:00:00.000Z,completed,Group Stage,Group G,,Iran,New Zealand,2.0,2.0,False,False,,,SoFi Stadium
+15,1,2026-06-15T22:00:00.000Z,completed,Group Stage,Group H,,Saudi Arabia,Uruguay,1.0,1.0,False,False,,,Hard Rock Stadium
+14,1,2026-06-15T19:00:00.000Z,completed,Group Stage,Group G,,Belgium,Egypt,1.0,1.0,False,False,,,Lumen Field
+13,1,2026-06-15T16:00:00.000Z,completed,Group Stage,Group H,,Spain,Cabo Verde,0.0,0.0,False,False,,,Mercedes-Benz Stadium
+18,1,2026-06-16T22:00:00.000Z,completed,Group Stage,Group I,,Iraq,Norway,1.0,4.0,False,False,,,Gillette Stadium
+11,1,2026-06-14T23:00:00.000Z,completed,Group Stage,Group E,,Côte d'Ivoire,Ecuador,1.0,0.0,False,False,,,Lincoln Financial Field
+10,1,2026-06-14T20:00:00.000Z,completed,Group Stage,Group F,,Netherlands,Japan,2.0,2.0,False,False,,,AT&T Stadium
+9,1,2026-06-14T17:00:00.000Z,completed,Group Stage,Group E,,Germany,Curaçao,7.0,1.0,False,False,,,NRG Stadium
+8,1,2026-06-14T04:00:00.000Z,completed,Group Stage,Group D,,Australia,Türkiye,2.0,0.0,False,False,,,BC Place
+7,1,2026-06-14T01:00:00.000Z,completed,Group Stage,Group C,,Haiti,Scotland,0.0,1.0,False,False,,,Gillette Stadium
+6,1,2026-06-13T22:00:00.000Z,completed,Group Stage,Group C,,Brazil,Morocco,1.0,1.0,False,False,,,MetLife Stadium
+5,1,2026-06-13T19:00:00.000Z,completed,Group Stage,Group B,,Qatar,Switzerland,1.0,1.0,False,False,,,Levi's Stadium
+4,1,2026-06-13T01:00:00.000Z,completed,Group Stage,Group D,,USA,Paraguay,4.0,1.0,False,False,,,SoFi Stadium
+3,1,2026-06-12T19:00:00.000Z,completed,Group Stage,Group B,,Canada,Bosnia & Herzegovina,1.0,1.0,False,False,,,BMO Field
+2,1,2026-06-12T02:00:00.000Z,completed,Group Stage,Group A,,South Korea,Czechia,2.0,1.0,False,False,,,Estadio Akron
+12,1,2026-06-15T02:00:00.000Z,completed,Group Stage,Group F,,Sweden,Tunisia,5.0,1.0,False,False,,,Estadio BBVA
+39,2,2026-06-21T22:00:00.000Z,completed,Group Stage,Group H,,Uruguay,Cabo Verde,2.0,2.0,False,False,,,Hard Rock Stadium
+40,2,2026-06-22T01:00:00.000Z,completed,Group Stage,Group G,,New Zealand,Egypt,1.0,3.0,False,False,,,BC Place
+41,2,2026-06-22T17:00:00.000Z,completed,Group Stage,Group J,,Argentina,Austria,2.0,0.0,False,False,,,AT&T Stadium
+42,2,2026-06-22T21:00:00.000Z,completed,Group Stage,Group I,,France,Iraq,3.0,0.0,False,False,,,Lincoln Financial Field
+43,2,2026-06-23T00:00:00.000Z,completed,Group Stage,Group I,,Norway,Senegal,3.0,2.0,False,False,,,MetLife Stadium
+48,2,2026-06-24T02:00:00.000Z,completed,Group Stage,Group K,,Colombia,DR Congo,1.0,0.0,False,False,,,Estadio Akron
+45,2,2026-06-23T17:00:00.000Z,completed,Group Stage,Group K,,Portugal,Uzbekistan,5.0,0.0,False,False,,,NRG Stadium
+46,2,2026-06-23T20:00:00.000Z,completed,Group Stage,Group L,,England,Ghana,0.0,0.0,False,False,,,Gillette Stadium
+47,2,2026-06-23T23:00:00.000Z,completed,Group Stage,Group L,,Panama,Croatia,0.0,1.0,False,False,,,BMO Field
+38,2,2026-06-21T19:00:00.000Z,completed,Group Stage,Group G,,Belgium,Iran,0.0,0.0,False,False,,,SoFi Stadium
+44,2,2026-06-23T03:00:00.000Z,completed,Group Stage,Group J,,Jordan,Algeria,1.0,2.0,False,False,,,Levi's Stadium
+37,2,2026-06-21T16:00:00.000Z,completed,Group Stage,Group H,,Spain,Saudi Arabia,4.0,0.0,False,False,,,Mercedes-Benz Stadium
+30,2,2026-06-19T22:00:00.000Z,completed,Group Stage,Group C,,Scotland,Morocco,0.0,1.0,False,False,,,Gillette Stadium
+35,2,2026-06-21T00:00:00.000Z,completed,Group Stage,Group E,,Ecuador,Curaçao,0.0,0.0,False,False,,,Arrowhead Stadium
+34,2,2026-06-20T20:00:00.000Z,completed,Group Stage,Group E,,Germany,Côte d'Ivoire,2.0,1.0,False,False,,,BMO Field
+33,2,2026-06-20T17:00:00.000Z,completed,Group Stage,Group F,,Netherlands,Sweden,5.0,1.0,False,False,,,NRG Stadium
+32,2,2026-06-20T03:00:00.000Z,completed,Group Stage,Group D,,Türkiye,Paraguay,0.0,1.0,False,False,,,Levi's Stadium
+31,2,2026-06-20T00:30:00.000Z,completed,Group Stage,Group C,,Brazil,Haiti,3.0,0.0,False,False,,,Lincoln Financial Field
+29,2,2026-06-19T19:00:00.000Z,completed,Group Stage,Group D,,USA,Australia,2.0,0.0,False,False,,,Lumen Field
+28,2,2026-06-19T01:00:00.000Z,completed,Group Stage,Group A,,Mexico,South Korea,1.0,0.0,False,False,,,Estadio Akron
+27,2,2026-06-18T22:00:00.000Z,completed,Group Stage,Group B,,Canada,Qatar,6.0,0.0,False,False,,,BC Place
+26,2,2026-06-18T19:00:00.000Z,completed,Group Stage,Group B,,Switzerland,Bosnia & Herzegovina,4.0,1.0,False,False,,,SoFi Stadium
+25,2,2026-06-18T16:00:00.000Z,completed,Group Stage,Group A,,Czechia,South Africa,1.0,1.0,False,False,,,Mercedes-Benz Stadium
+36,2,2026-06-21T04:00:00.000Z,completed,Group Stage,Group F,,Tunisia,Japan,0.0,4.0,False,False,,,Estadio BBVA
+63,3,2026-06-27T00:00:00.000Z,completed,Group Stage,Group H,,Uruguay,Spain,0.0,1.0,False,False,,,Estadio Akron
+64,3,2026-06-27T00:00:00.000Z,completed,Group Stage,Group H,,Cabo Verde,Saudi Arabia,0.0,0.0,False,False,,,NRG Stadium
+65,3,2026-06-27T03:00:00.000Z,completed,Group Stage,Group G,,Egypt,Iran,1.0,1.0,False,False,,,Lumen Field
+66,3,2026-06-27T03:00:00.000Z,completed,Group Stage,Group G,,New Zealand,Belgium,1.0,5.0,False,False,,,BC Place
+67,3,2026-06-27T21:00:00.000Z,completed,Group Stage,Group L,,Panama,England,0.0,2.0,False,False,,,MetLife Stadium
+72,3,2026-06-28T02:00:00.000Z,completed,Group Stage,Group J,,Algeria,Austria,3.0,3.0,False,False,,,Arrowhead Stadium
+69,3,2026-06-27T23:30:00.000Z,completed,Group Stage,Group K,,Colombia,Portugal,0.0,0.0,False,False,,,Hard Rock Stadium
+70,3,2026-06-27T23:30:00.000Z,completed,Group Stage,Group K,,DR Congo,Uzbekistan,3.0,1.0,False,False,,,Mercedes-Benz Stadium
+71,3,2026-06-28T02:00:00.000Z,completed,Group Stage,Group J,,Jordan,Argentina,1.0,3.0,False,False,,,AT&T Stadium
+62,3,2026-06-26T19:00:00.000Z,completed,Group Stage,Group I,,Senegal,Iraq,5.0,0.0,False,False,,,BMO Field
+68,3,2026-06-27T21:00:00.000Z,completed,Group Stage,Group L,,Croatia,Ghana,2.0,1.0,False,False,,,Lincoln Financial Field
+61,3,2026-06-26T19:00:00.000Z,completed,Group Stage,Group I,,Norway,France,1.0,4.0,False,False,,,Gillette Stadium
+50,3,2026-06-24T19:00:00.000Z,completed,Group Stage,Group B,,Bosnia & Herzegovina,Qatar,3.0,1.0,False,False,,,Lumen Field
+59,3,2026-06-26T02:00:00.000Z,completed,Group Stage,Group D,,Paraguay,Australia,0.0,0.0,False,False,,,Levi's Stadium
+58,3,2026-06-25T23:00:00.000Z,completed,Group Stage,Group F,,Japan,Sweden,1.0,1.0,False,False,,,AT&T Stadium
+57,3,2026-06-25T23:00:00.000Z,completed,Group Stage,Group F,,Tunisia,Netherlands,1.0,3.0,False,False,,,Arrowhead Stadium
+56,3,2026-06-25T20:00:00.000Z,completed,Group Stage,Group E,,Curaçao,Côte d'Ivoire,0.0,2.0,False,False,,,Lincoln Financial Field
+55,3,2026-06-25T20:00:00.000Z,completed,Group Stage,Group E,,Ecuador,Germany,2.0,1.0,False,False,,,MetLife Stadium
+54,3,2026-06-25T01:00:00.000Z,completed,Group Stage,Group A,,South Africa,South Korea,1.0,0.0,False,False,,,Estadio BBVA
+53,3,2026-06-25T01:00:00.000Z,completed,Group Stage,Group A,,Czechia,Mexico,0.0,3.0,False,False,,,Estadio Azteca
+52,3,2026-06-24T22:00:00.000Z,completed,Group Stage,Group C,,Morocco,Haiti,4.0,2.0,False,False,,,Mercedes-Benz Stadium
+51,3,2026-06-24T22:00:00.000Z,completed,Group Stage,Group C,,Scotland,Brazil,0.0,3.0,False,False,,,Hard Rock Stadium
+60,3,2026-06-26T02:00:00.000Z,completed,Group Stage,Group D,,Türkiye,USA,3.0,2.0,False,False,,,SoFi Stadium
+49,3,2026-06-24T19:00:00.000Z,completed,Group Stage,Group B,,Switzerland,Canada,2.0,1.0,False,False,,,BC Place
+162,5,2026-07-04T17:00:00.000Z,completed,Round of 16,,Round of 16,Canada,Morocco,0.0,3.0,False,False,,,NRG Stadium
+163,5,2026-07-04T21:00:00.000Z,completed,Round of 16,,Round of 16,Paraguay,France,0.0,1.0,False,False,,,Lincoln Financial Field
+164,5,2026-07-05T20:00:00.000Z,completed,Round of 16,,Round of 16,Brazil,Norway,1.0,2.0,False,False,,,MetLife Stadium
+168,5,2026-07-07T16:00:00.000Z,completed,Round of 16,,Round of 16,Argentina,Egypt,3.0,2.0,False,False,,,Mercedes-Benz Stadium
+166,5,2026-07-06T19:00:00.000Z,completed,Round of 16,,Round of 16,Portugal,Spain,0.0,1.0,False,False,,,AT&T Stadium
+167,5,2026-07-07T00:00:00.000Z,completed,Round of 16,,Round of 16,USA,Belgium,1.0,4.0,False,False,,,Lumen Field
+169,5,2026-07-07T20:00:00.000Z,completed,Round of 16,,Round of 16,Switzerland,Colombia,0.0,0.0,True,True,4.0,3.0,BC Place
+165,5,2026-07-06T01:00:00.000Z,completed,Round of 16,,Round of 16,Mexico,England,2.0,3.0,False,False,,,Estadio Azteca
+159,6,2026-07-03T18:00:00.000Z,completed,Round of 32,,Round of 32,Australia,Egypt,1.0,1.0,True,True,2.0,4.0,AT&T Stadium
+161,6,2026-07-04T01:30:00.000Z,completed,Round of 32,,Round of 32,Colombia,Ghana,1.0,0.0,False,False,,,Arrowhead Stadium
+160,6,2026-07-03T22:00:00.000Z,completed,Round of 32,,Round of 32,Argentina,Cabo Verde,3.0,2.0,True,False,,,Hard Rock Stadium
+158,6,2026-07-03T03:00:00.000Z,completed,Round of 32,,Round of 32,Switzerland,Algeria,2.0,0.0,False,False,,,BC Place
+154,6,2026-07-01T20:00:00.000Z,completed,Round of 32,,Round of 32,Belgium,Senegal,3.0,2.0,True,False,,,Lumen Field
+156,6,2026-07-02T19:00:00.000Z,completed,Round of 32,,Round of 32,Spain,Austria,3.0,0.0,False,False,,,SoFi Stadium
+155,6,2026-07-02T00:00:00.000Z,completed,Round of 32,,Round of 32,USA,Bosnia & Herzegovina,2.0,0.0,False,False,,,Levi's Stadium
+153,6,2026-07-01T16:00:00.000Z,completed,Round of 32,,Round of 32,England,DR Congo,2.0,1.0,False,False,,,Mercedes-Benz Stadium
+152,6,2026-07-01T02:00:00.000Z,completed,Round of 32,,Round of 32,Mexico,Ecuador,2.0,0.0,False,False,,,Estadio Azteca
+151,6,2026-06-30T21:00:00.000Z,completed,Round of 32,,Round of 32,France,Sweden,3.0,0.0,False,False,,,MetLife Stadium
+150,6,2026-06-30T17:00:00.000Z,completed,Round of 32,,Round of 32,Côte d'Ivoire,Norway,1.0,2.0,False,False,,,AT&T Stadium
+149,6,2026-06-30T01:00:00.000Z,completed,Round of 32,,Round of 32,Netherlands,Morocco,1.0,1.0,True,True,2.0,3.0,Estadio BBVA
+148,6,2026-06-29T20:30:00.000Z,completed,Round of 32,,Round of 32,Germany,Paraguay,1.0,1.0,True,True,3.0,4.0,Gillette Stadium
+147,6,2026-06-29T17:00:00.000Z,completed,Round of 32,,Round of 32,Brazil,Japan,2.0,1.0,False,False,,,NRG Stadium
+146,6,2026-06-28T19:00:00.000Z,completed,Round of 32,,Round of 32,South Africa,Canada,0.0,1.0,False,False,,,SoFi Stadium
+157,6,2026-07-02T23:00:00.000Z,completed,Round of 32,,Round of 32,Portugal,Croatia,2.0,1.0,False,False,,,BMO Field
+172,27,2026-07-11T21:00:00.000Z,completed,Quarterfinal,,Quarterfinals,Norway,England,1.0,2.0,True,False,,,Hard Rock Stadium
+170,27,2026-07-09T20:00:00.000Z,completed,Quarterfinal,,Quarterfinals,France,Morocco,2.0,0.0,False,False,,,Gillette Stadium
+171,27,2026-07-10T19:00:00.000Z,completed,Quarterfinal,,Quarterfinals,Spain,Belgium,2.0,1.0,False,False,,,SoFi Stadium
+173,27,2026-07-12T01:00:00.000Z,completed,Quarterfinal,,Quarterfinals,Argentina,Switzerland,3.0,1.0,True,False,,,Arrowhead Stadium

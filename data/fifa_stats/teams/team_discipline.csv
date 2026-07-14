@@ -1,0 +1,49 @@
+person_id,name,team,team_abbreviation,rank,fouls_against,fouls_for,yellow_cards,red_cards,indirect_red_cards,offsides
+285023_43971,Switzerland,Switzerland,SUI,1,87,89,8,1,1,13
+285023_43935,Belgium,Belgium,BEL,2,78,68,6,1,0,8
+285023_43872,Morocco,Morocco,MAR,3,74,88,7,0,0,9
+285023_43922,Argentina,Argentina,ARG,4,73,68,6,0,0,18
+285023_43899,Canada,Canada,CAN,5,72,71,11,0,0,7
+285023_43926,Colombia,Colombia,COL,6,70,64,8,0,0,19
+285023_43969,Spain,Spain,ESP,7,68,55,5,0,0,12
+285023_43928,Paraguay,Paraguay,PAR,8,66,61,9,1,0,5
+285023_43942,England,England,ENG,9,62,87,7,1,0,11
+285023_43946,France,France,FRA,10,59,54,4,0,0,7
+285023_43855,Egypt,Egypt,EGY,10,59,67,12,0,0,4
+285023_44037,Bosnia and Herzegovina,Bosnia and Herzegovina,BIH,10,59,37,7,1,0,2
+285023_43961,Norway,Norway,NOR,13,58,41,3,0,0,5
+285023_43911,Mexico,Mexico,MEX,13,58,48,4,1,0,5
+285023_43860,Ghana,Ghana,GHA,15,56,47,6,0,0,8
+285023_43921,USA,USA,USA,15,56,64,7,1,0,11
+285023_43819,Japan,Japan,JPN,17,55,31,4,0,0,4
+285023_43908,Haiti,Haiti,HAI,17,55,43,7,0,0,7
+285023_43924,Brazil,Brazil,BRA,19,51,54,8,0,0,11
+285023_43948,Germany,Germany,GER,19,51,42,3,0,0,4
+285023_43927,Ecuador,Ecuador,ECU,21,49,37,8,1,0,2
+285023_43934,Austria,Austria,AUT,22,47,27,5,0,0,11
+285023_43976,Australia,Australia,AUS,23,46,38,5,0,0,1
+285023_43914,Panama,Panama,PAN,23,46,33,5,0,0,6
+285023_44005,Uzbekistan,Uzbekistan,UZB,25,45,29,4,0,0,3
+285023_43938,Croatia,Croatia,CRO,25,45,46,4,0,0,8
+285023_43963,Portugal,Portugal,POR,27,44,58,7,0,0,10
+285023_20014,Congo DR,Congo DR,COD,27,44,44,6,0,0,9
+285023_43960,Netherlands,Netherlands,NED,27,44,43,3,0,0,8
+285023_43970,Sweden,Sweden,SWE,30,43,50,5,0,0,9
+285023_43967,Scotland,Scotland,SCO,31,42,39,5,0,0,2
+285023_43883,South Africa,South Africa,RSA,32,38,46,5,2,0,8
+285023_43995,Czechia,Czechia,CZE,33,37,31,1,0,0,5
+285023_43879,Senegal,Senegal,SEN,34,36,48,3,0,0,10
+285023_43834,Qatar,Qatar,QAT,34,36,28,4,2,0,4
+285023_43817,IR Iran,IR Iran,IRN,36,35,23,6,0,0,9
+285023_1895293,Curaçao,Curaçao,CUW,37,32,31,7,0,0,5
+285023_43978,New Zealand,New Zealand,NZL,37,32,23,4,0,0,4
+285023_43972,Türkiye,Türkiye,TUR,39,31,38,2,0,0,7
+285023_43820,Jordan,Jordan,JOR,39,31,23,4,0,0,3
+285023_43930,Uruguay,Uruguay,URU,39,31,29,5,1,0,14
+285023_43854,Côte d'Ivoire,Côte d'Ivoire,CIV,42,29,36,4,0,0,4
+285023_43843,Algeria,Algeria,ALG,42,29,40,3,0,0,4
+285023_43835,Saudi Arabia,Saudi Arabia,KSA,42,29,26,6,0,0,3
+285023_43850,Cabo Verde,Cabo Verde,CPV,45,27,47,5,0,0,7
+285023_43888,Tunisia,Tunisia,TUN,45,27,34,1,0,0,9
+285023_43818,Iraq,Iraq,IRQ,45,27,31,4,1,0,1
+285023_43822,Korea Republic,Korea Republic,KOR,48,25,32,4,0,0,8
