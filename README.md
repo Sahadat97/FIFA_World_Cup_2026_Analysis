@@ -4,6 +4,8 @@ A data pipeline and Streamlit app for exploring the 2026 World Cup —
 match-by-match event data, shot maps, an animated momentum replay, and
 tournament-wide player and team leaderboards.
 
+**Live dashboard:** https://fifaworldcup2026analysis-duwyambu6y4buabctacbpt.streamlit.app
+
 ## Project structure
 
 ```
