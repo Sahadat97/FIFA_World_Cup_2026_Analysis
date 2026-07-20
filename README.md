@@ -13,6 +13,7 @@ momentum_plot_3d.py          an alternate 3D terrain version of the same replay
 scripts/
   fetch_worldcup_data.py     pulls match/event/shot/box-score data (balldontlie API)
   fetch_fifa_stats.py        scrapes FIFA.com's official stat leaderboards
+  predict_final_winner.py    trains the final-winner model (also runs live in the app)
 assets/
   Fifa26logo.svg             tournament logo, shown in the app sidebar
 data/                        all fetched CSVs live here
@@ -64,7 +65,7 @@ One quirk worth knowing: FIFA's backend only fills in a player's stat columns on
 streamlit run app.py
 ```
 
-The app reads straight from the `data/` CSVs, so run the fetch scripts first. Match Analysis lets you pick any match and see the momentum replay, shot map, and team comparison. Player Analysis covers the tournament-wide leaderboards.
+The app reads straight from the `data/` CSVs, so run the fetch scripts first. Match Analysis lets you pick any match and see the momentum replay, shot map, and team comparison. Player Analysis covers the tournament-wide leaderboards. Final Prediction runs a machine learning model live and projects who wins the final.
 
 ## How the momentum replay works
 
@@ -77,6 +78,14 @@ The pitch heatmap took a couple of passes to get right. The first version only l
 The animation itself is native Plotly: one frame per 2-minute step of the sliding window, each frame swapping out just the heatmap trace and updating the title and the shaded band on the strip below. The window keeps sliding all the way to the real final whistle, narrowing near the end. That includes extra time, since the match length comes straight from the event data rather than being hardcoded to 90 minutes.
 
 `momentum_plot_3d.py` builds a second, more stylized version: a dark 3D terrain surface instead of a flat heatmap, closer to a broadcast graphic. It's not wired into the app yet.
+
+## How the final prediction works
+
+The Final Prediction tab (`scripts/predict_final_winner.py`) builds a strength profile for all 48 teams: match box-score averages from `team_match_stats.csv`, results-derived form from `matches.csv`, and cumulative totals from every FIFA.com team leaderboard category. A `HistGradientBoostingClassifier` trains on every completed match, framed as one team's profile minus the other's predicting win, draw, or loss, mirrored both directions to remove ordering bias. Five-fold cross-validation reports honest accuracy and log-loss before anything gets shown.
+
+The tab figures out who's still alive on its own by scanning `matches.csv` for the latest completed knockout round and taking its winners (penalty shootouts included), so it keeps working as the tournament progresses without code changes. With four teams left it simulates the semifinal and final for all three possible pairings and averages them, since the real draw usually isn't in the pulled data yet. With two teams left it's a direct matchup. Once the final itself is played, the tab just reports the champion.
+
+Run `python scripts/predict_final_winner.py` for the same model as a command-line report instead of a dashboard tab.
 
 ## Data sources
 

@@ -12,5 +12,6 @@ __pycache__/
 # generated visualization exports (regenerate via momentum_plot*.py)
 momentum_animated.html
 momentum_animated_3d.html
+recordings/
 
 .claude/

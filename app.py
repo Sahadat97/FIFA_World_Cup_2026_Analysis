@@ -4,13 +4,16 @@ FIFA World Cup 2026 — analysis app.
 Match Analysis: the animated momentum replay plus an EA FC-style match
 statistics panel (Summary / Possession / Shooting / Passing / Defending /
 Events tabs).  Player Analysis: tournament-wide leaderboards from the
-FIFA.com stats, with an enhanced finishing-vs-xG view.
+FIFA.com stats, with an enhanced finishing-vs-xG view.  Final Prediction:
+a gradient boosting model trained on this tournament's own results,
+projecting who wins the final.
 
 Run:  streamlit run app.py
 """
 
 import base64
 import os
+import sys
 from pathlib import Path
 
 # pyarrow's bundled mimalloc allocator segfaults on macOS when Streamlit
@@ -26,6 +29,13 @@ from momentum_plot import build_figure as build_momentum_replay, smooth2d
 
 HERE = Path(__file__).parent
 LOGO_PATH = HERE / "assets" / "Fifa26logo.svg"
+
+sys.path.insert(0, str(HERE / "scripts"))
+from predict_final_winner import (
+    build_team_profiles, build_training_set, train_and_evaluate,
+    determine_next_matchup_pool, matchup_advance_prob, simulate_bracket,
+    all_pairings_of_four,
+)
 
 st.set_page_config(page_title="FIFA World Cup 2026", page_icon="⚽", layout="wide")
 
@@ -176,6 +186,17 @@ def momentum_replay_fig(mid: int):
     return build_momentum_replay(mid)
 
 
+@st.cache_resource
+def load_prediction_model():
+    """Trains the final-winner classifier once per data version and caches
+    the fitted model (st.cache_resource, not cache_data, since it holds a
+    non-serializable-friendly sklearn estimator alongside the profile)."""
+    profile = build_team_profiles()
+    X, y = build_training_set(profile)
+    model, metrics = train_and_evaluate(X, y)
+    return profile, model, metrics
+
+
 matches, events, shots, team_stats = load_data()
 
 
@@ -314,7 +335,9 @@ def attack_heatmap(s: pd.DataFrame, is_home: bool, scale, title: str) -> go.Figu
 
 # ================================================================ sidebar
 st.sidebar.markdown(LOGO_HTML, unsafe_allow_html=True)
-section = st.sidebar.radio("Section", ["Match Analysis", "Player Analysis"], label_visibility="collapsed")
+section = st.sidebar.radio(
+    "Section", ["Match Analysis", "Player Analysis", "Final Prediction"], label_visibility="collapsed"
+)
 
 
 # ================================================================ MATCH ANALYSIS
@@ -563,7 +586,7 @@ if section == "Match Analysis":
 
 
 # ================================================================ PLAYER ANALYSIS
-else:
+elif section == "Player Analysis":
     st.title("Player analysis")
     fifa = load_fifa_stats()
     gb = fifa.get("adidas_golden_boot")
@@ -732,3 +755,87 @@ else:
 
     with st.expander("Full table"):
         st.dataframe(df_cat, use_container_width=True, hide_index=True)
+
+
+# ================================================================ FINAL PREDICTION
+else:
+    st.title("Final prediction")
+    st.caption(
+        "A gradient boosting model trained on every completed match this tournament, using "
+        "team box-score averages, results-derived form, and FIFA.com's cumulative team "
+        "leaderboards as features. See scripts/predict_final_winner.py."
+    )
+
+    profile, model, metrics = load_prediction_model()
+
+    k1, k2, k3 = st.columns(3)
+    k1.metric("Model accuracy (5-fold CV)", f"{metrics['accuracy']:.1%}",
+              f"baseline {metrics['baseline_accuracy']:.1%}", delta_color="off")
+    k2.metric("Log-loss (5-fold CV)", f"{metrics['log_loss']:.3f}",
+              "lower is better", delta_color="off")
+    k3.metric("Matches analyzed", metrics["n_matches"])
+    st.markdown("")
+
+    stage, pool = determine_next_matchup_pool(matches)
+    # color follows the team, not its rank in any given chart — assign once
+    # so a team keeps the same color across the summary and every scenario
+    palette = [C_HOME, C_AWAY, C_YELLOW, C_RED]
+    team_colors = {t: palette[i % len(palette)] for i, t in enumerate(pool)} if pool else {}
+
+    def prob_bar_chart(probs: dict) -> go.Figure:
+        order = sorted(probs, key=probs.get, reverse=True)
+        fig = go.Figure(go.Bar(
+            y=[f"{flag(t)} {t}" for t in order],
+            x=[probs[t] * 100 for t in order],
+            orientation="h",
+            marker=dict(color=[team_colors[t] for t in order], line=dict(color=C_SURFACE, width=2)),
+            text=[f"{probs[t]:.1%}" for t in order], textposition="outside",
+            hovertemplate="%{y}: %{x:.1f}%<extra></extra>",
+        ))
+        fig.update_layout(
+            **PLOTLY_BASE, height=90 + 60 * len(order), showlegend=False,
+            xaxis=dict(title="chance of winning the final (%)", showgrid=True, gridcolor=C_GRID,
+                       color=C_MUTED, range=[0, max(probs.values()) * 130]),
+            yaxis=dict(autorange="reversed", color=C_INK2, tickfont=dict(size=13)),
+        )
+        return fig
+
+    if stage is None:
+        st.info("The knockout stage hasn't started yet, so there's nothing to predict.")
+    elif stage == "champion":
+        st.success(f"The tournament is decided: **{flag(pool)} {pool}** won the FIFA World Cup 2026.")
+    elif len(pool) == 2:
+        st.subheader(f"Final: {flag(pool[0])} {pool[0]} vs {flag(pool[1])} {pool[1]}")
+        p_a = matchup_advance_prob(model, profile, pool[0], pool[1])
+        st.plotly_chart(prob_bar_chart({pool[0]: p_a, pool[1]: 1 - p_a}), use_container_width=True)
+    elif len(pool) == 4:
+        st.subheader("Teams advancing to the " + stage)
+        st.caption(
+            "The actual semifinal pairing isn't in the pulled data yet, so this simulates all 3 "
+            "possible ways to pair the remaining 4 teams (20,000 Monte Carlo trials each) and "
+            "averages the result."
+        )
+        pairings = all_pairings_of_four(pool)
+        totals = {t: 0.0 for t in pool}
+        scenario_results = []
+        for pairing in pairings:
+            result = simulate_bracket(model, profile, pairing)
+            scenario_results.append((pairing, result))
+            for t in pool:
+                totals[t] += result[t]
+        avg = {t: totals[t] / len(pairings) for t in pool}
+
+        st.plotly_chart(prob_bar_chart(avg), use_container_width=True)
+
+        with st.expander("Breakdown by semifinal pairing"):
+            for pairing, result in scenario_results:
+                label = (f"{flag(pairing[0][0])} {pairing[0][0]} vs {flag(pairing[0][1])} {pairing[0][1]}"
+                         f"   ·   {flag(pairing[1][0])} {pairing[1][0]} vs {flag(pairing[1][1])} {pairing[1][1]}")
+                st.markdown(f"**{label}**")
+                st.plotly_chart(prob_bar_chart(result), use_container_width=True)
+    else:
+        st.info(f"{len(pool)} teams are advancing to the {stage} — outside the 2-team/4-team "
+                "matchup sizes this page projects a final winner for.")
+
+    with st.expander("Team strength profile (model input features)"):
+        st.dataframe(profile, use_container_width=True)
